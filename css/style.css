@@ -43,7 +43,7 @@ img {
   | Header
   |============================
 */
-.header-cont {
+.header-nav {
   display: flex;
   gap: 40px;
   align-items: center;
@@ -88,13 +88,45 @@ img {
   align-items: center;
   gap: 40px;
   padding: 24px 0;
+  
 }
-.mag:hover {
+
+
+
+.header-link-menu:hover {
   color: var(--color-ocean);
 }
-.mag:focus {
+.header-link-menu:focus {
   color: var(--color-ocean);
 }
+.header-link {
+  
+
+}
+.header-link-menu {
+  position: relative;
+  padding: 24px 0;
+
+
+}
+
+.header-link-menu::after {
+ content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+ display: block;
+  width: 100%;
+  height: 4px;
+  
+ 
+  border-radius: 2px;
+
+}
+.header-link-menu.active::after{
+  background-color: var(--color-ocean);
+}
+
 .address {
   font-style: normal;
   margin-left: auto;
@@ -120,9 +152,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.mag {
-  padding: 24px 0;
-}
+
 /**
   |============================
   |Section 1
@@ -602,6 +632,19 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 /**
   |============================
-  | 
+  |Modal window
   |============================
 */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal {
+}
+.modal-close-btn {
+}
+.modal-icon {
+}
